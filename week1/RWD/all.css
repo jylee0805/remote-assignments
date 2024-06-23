@@ -318,8 +318,7 @@ a {
 }
 
 .wrap {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -382,6 +381,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .content_item {
   padding-bottom: 5rem;
