@@ -370,10 +370,19 @@ a{
 }
 .assignment{
     list-style: none;
-    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.assignment li{
+  margin-bottom: 30px;
+ 
 }
 .assignment_link{
-    padding: 1.5rem 10rem;
+    width: 400px;
+    display: block;
+    padding: 1.5rem 0;
     background: #d08f8f;
     border-radius: 10px;
     color: white;
