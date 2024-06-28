@@ -342,7 +342,7 @@ a {
 .nav_item {
   padding: 0 15px;
 }
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   .nav {
     display: none;
   }
@@ -372,7 +372,7 @@ a {
   border: none;
   z-index: 1;
 }
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   .menu_btn {
     display: block;
   }
@@ -413,12 +413,12 @@ a {
   margin: 10px;
   background: #8798A9;
 }
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   .content_item {
     width: 45%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 499px) {
   .content_item {
     width: 90%;
   }

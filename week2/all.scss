@@ -57,6 +57,7 @@ a{
     background: none;
     border: none;
     z-index: 1;
+    
     @include w800{
         display: block;
     }
