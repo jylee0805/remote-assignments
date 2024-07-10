@@ -1,0 +1,111 @@
+@import "reset";
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.wrap {
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  background: #ededed;
+  &_title {
+    flex-grow: 0;
+    font-size: 1.2rem;
+    margin-right: auto;
+  }
+}
+.nav {
+  display: flex;
+  list-style: none;
+  position: relative;
+  &_item {
+    padding: 0 15px;
+  }
+  @include w800 {
+    display: none;
+  }
+}
+.float_menu {
+  width: 300px;
+  height: 100vh;
+  list-style: none;
+  background: #fff;
+  padding-left: 0;
+  position: fixed;
+  right: 0px;
+  top: -20px;
+  text-align: left;
+  border: 1px solid #e8e8e8;
+  z-index: 0;
+  .float_item {
+    display: block;
+    padding: 20px;
+  }
+}
+.menu_btn {
+  display: none;
+  background: none;
+  border: none;
+  z-index: 1;
+  position: relative;
+  @include w800 {
+    display: block;
+  }
+}
+.banner {
+  display: flex;
+  padding: 5rem;
+  background: #cbdced;
+  &_title {
+    margin: auto;
+  }
+}
+.main {
+  text-align: center;
+  &_btn {
+    background: #dcedfe;
+    border: none;
+    padding: 10px;
+    margin: 15px 0;
+  }
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  &_item {
+    padding-bottom: 5rem;
+    width: 40%;
+    margin: 10px;
+    background: #8798a9;
+    @include w800 {
+      width: 45%;
+    }
+    @include w500 {
+      width: 90%;
+    }
+  }
+}
+.more {
+  display: none;
+}

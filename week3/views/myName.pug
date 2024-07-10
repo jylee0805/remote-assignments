@@ -1,0 +1,14 @@
+doctype html 
+html(len="en") 
+    head
+        title myName 
+    body 
+        h1 Hello 
+        if name
+            h2 #{name}
+            form(action="/clear", method="get") 
+                button(type="submit") clear cookie
+        else
+            form(action="/trackName", method="get") 
+                input(type="text",name='name')
+                button(type="submit") submit

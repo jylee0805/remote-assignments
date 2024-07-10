@@ -1,0 +1,80 @@
+@import "reset";
+@import "mixin";
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+.wrap{
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2rem;
+    background: #EDEDED;
+    &_title{
+        flex-grow: 0;
+        font-size: 1.2rem;
+        margin-right: auto;
+    }
+}
+.nav{
+    display: flex;
+    list-style: none;
+    &_item{
+        padding: 0 15px;    
+    }
+    @include w800{
+        display: none;
+    }
+}
+.menu_btn{
+    display: none;
+    background: none;
+    border: none;
+    @include w800{
+        display: block;
+    }
+}
+.banner{
+    display: flex;
+    padding: 5rem;
+    background: #CBDCED;
+    &_title{
+        margin: auto;
+    }
+}
+.main{
+    text-align: center;
+    &_btn{
+        background: #DCEDFE;
+        border: none;
+        padding: 10px;
+        margin: 15px 0;
+    }
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    &_item{
+        padding-bottom: 5rem;
+        width: 40%;
+        margin: 10px;
+        background: #8798A9;
+        @include w800{
+            width: 45%;
+        }
+        @include w500{
+            width: 90%;
+        }
+    }
+}
