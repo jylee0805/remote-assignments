@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/remote-assignments/static/css/main.781ba27a.css",
+    "main.js": "/remote-assignments/static/js/main.995ce173.js",
+    "static/js/453.ad32e25e.chunk.js": "/remote-assignments/static/js/453.ad32e25e.chunk.js",
+    "index.html": "/remote-assignments/index.html",
+    "main.781ba27a.css.map": "/remote-assignments/static/css/main.781ba27a.css.map",
+    "main.995ce173.js.map": "/remote-assignments/static/js/main.995ce173.js.map",
+    "453.ad32e25e.chunk.js.map": "/remote-assignments/static/js/453.ad32e25e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.781ba27a.css",
+    "static/js/main.995ce173.js"
+  ]
+}
