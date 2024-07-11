@@ -15,3 +15,11 @@ main{
 .product_title{
     margin: 10px 0;
 }
+.compare{
+    margin: 0 auto;
+    text-align: justify;
+    width: 50%;
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+}
