@@ -10,10 +10,20 @@ function delayedResult(n1, n2, delayTime, callback) {
 }
 delayedResult(4, 5, 3000, function (result) {
   console.log(result);
-}); // 9 (4+5) will be shown in the console after 3 seconds
+});
 delayedResult(-5, 10, 2000, function (result) {
   window.alert(result);
-}); // 5 (-5+10) will be shown in an alert dialog after 2 seconds
+});
+
+//額外挑戰
+const delayedResultPromise = (n1, n2, delayTime) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(n1 + n2);
+    }, delayTime);
+  });
+
+delayedResultPromise(4, 5, 3000).then((response) => console.log(response));
 
 //assignment2
 function ajax(url) {
@@ -22,6 +32,7 @@ function ajax(url) {
     .then((res) => res.json())
     .catch((error) => console.log(error));
 }
+
 function render(data) {
   data.forEach((element) => {
     productInfo += `
@@ -35,8 +46,22 @@ function render(data) {
   });
 }
 
+//額外挑戰
+function renderTemplate(data) {
+  let temp = document.getElementsByTagName("template")[0];
+  data.forEach((element) => {
+    let clon = temp.content.cloneNode(true);
+    let title = clon.querySelector("h2");
+    let info = clon.querySelectorAll("p");
+    title.innerText = element.name;
+    info[0].innerText = element.price;
+    info[1].innerText = element.description;
+    main.append(clon);
+  });
+}
+
 const url = "https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products";
 
 ajax(url).then((data) => {
-  render(data);
+  renderTemplate(data);
 });

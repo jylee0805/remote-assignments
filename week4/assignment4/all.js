@@ -1,17 +1,16 @@
 const card = document.querySelector(".card");
 const btn = document.querySelector("button");
-let fetchData = [];
-let index = 0;
+let page = 1;
 
 //初始載入
-queryData(index + 5);
+queryData(page);
 
 btn.addEventListener("click", () => {
-  queryData(index + 5);
+  queryData(page);
 });
 
-function queryData(index) {
-  fetch(`https://api.github.com/orgs/facebook/repos?per_page=${index}&page=1`)
+function queryData(page) {
+  fetch(`https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`)
     .then((res) => res.json())
     .then((data) => {
       print(data);
@@ -20,7 +19,7 @@ function queryData(index) {
 }
 
 function print(data) {
-  for (let i = index; i < data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     let cardItem = document.createElement("li");
     let private = "";
     let inner = "";
@@ -50,5 +49,5 @@ function print(data) {
     }
     cardItem.innerHTML = inner;
   }
-  index += 5;
+  page += 1;
 }

@@ -1,17 +1,22 @@
-import React from "react";
-const handlerBanner = (event) => {
-  const text = event.target.innerText;
-  if (text === "Welcome Message") {
-    event.target.innerText = "Have a Good Time!";
-  } else {
-    event.target.innerText = "Welcome Message";
-  }
-};
+import React, { useState } from "react";
+
 const Banner = () => {
+  const [changes, setChange] = useState("Welcome Message");
+
+  const handlerBanner = (prevChange) => {
+    setChange((prevChange) => {
+      if (prevChange === "Welcome Message") {
+        return (prevChange = "Have a Good Time!");
+      } else {
+        return (prevChange = "Welcome Message");
+      }
+    });
+  };
+
   return (
     <div className="banner">
-      <h2 className="banner_title" onClick={handlerBanner}>
-        Welcome Message
+      <h2 className="banner_title" onClick={() => handlerBanner(changes)}>
+        {changes}
       </h2>
     </div>
   );
