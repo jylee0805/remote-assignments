@@ -19,15 +19,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetch(`https://api.github.com/orgs/facebook/repos?per_page=5&page=1`)
-      .then((res) => res.json())
-      .then((data) => {
-        setItems(data);
-      })
-      .catch((error) => console.log(error));
-    setPages((prevPages) => {
-      return prevPages + 1;
-    });
+    queryData(1);
   }, []);
 
   return (
