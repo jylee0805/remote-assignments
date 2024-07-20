@@ -19,7 +19,19 @@ const App = () => {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     queryData(1);
+=======
+    fetch(`https://api.github.com/orgs/facebook/repos?per_page=5&page=1`)
+      .then((res) => res.json())
+      .then((data) => {
+        setItems(data);
+      })
+      .catch((error) => console.log(error));
+    setPages((prevPages) => {
+      return prevPages + 1;
+    });
+>>>>>>> 25943b90 (assignment4 opt finish)
   }, []);
 
   return (
